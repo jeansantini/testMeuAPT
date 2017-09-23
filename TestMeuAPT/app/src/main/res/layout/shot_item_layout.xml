@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_item_shot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_micro"
+    >
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="@dimen/card_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/spacing_double"
+            android:paddingRight="@dimen/spacing_double"
+            android:paddingTop="@dimen/spacing_normal"
+            >
+
+            <TextView
+                android:id="@+id/tv_shot_title"
+                style="@style/tvTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/spacing_normal"
+                android:text="Hair salon landing page" />
+
+            <ImageView
+                android:id="@+id/iv_shot_teaser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_shot_title"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_views_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_shot_teaser"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/iv_views_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/spacing_normal"
+                    android:src="@drawable/ic_remove_red_eye_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_shot_views_count"
+                    style="@style/tvDefaultStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_views_count"
+                    android:text="2.5054684" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_shot_created_at"
+                style="@style/tvCreatedAtStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_views_count"
+                android:layout_marginTop="@dimen/spacing_double"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

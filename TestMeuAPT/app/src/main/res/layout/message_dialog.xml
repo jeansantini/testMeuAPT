@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_modal"
+    android:padding="@dimen/spacing_double"
+    >
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_black_36dp"
+        android:tint="@color/colorWhite"
+        android:layout_margin="@dimen/spacing_double"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/tv_modal_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:text="Dinheiro enviado com sucesso!"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/tv_size_normal"
+        />
+
+
+    <Button
+        android:id="@+id/bt_modal_ok"
+        style="@style/btndefault"
+        android:layout_width="@dimen/bt_size_default_width"
+        android:layout_height="@dimen/bt_size_default_height"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_button_default"
+        android:text="@string/modal_bt_ok"
+        android:layout_below="@+id/tv_modal_msg"
+        android:layout_marginTop="@dimen/spacing_double_x"
+        />
+</RelativeLayout>
