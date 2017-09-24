@@ -127,10 +127,15 @@ public class ShotDetailActivity extends BaseActivity implements ShotDetailContra
 
                     }
                 });
-
-        tvTitle.setText(shot.getTitle());
-        tvDescription.setText(Html.fromHtml(shot.getDescription()).toString().replaceAll("\n", "").trim());
-        tvCreatedAt.setText(Utils.formatDate(shot.getCreatedAt()));
+        if(!Utils.stringIsEmpty(shot.getTitle())) {
+            tvTitle.setText(shot.getTitle());
+        }
+        if(!Utils.stringIsEmpty(shot.getDescription())) {
+            tvDescription.setText(Html.fromHtml(shot.getDescription()).toString().replaceAll("\n", "").trim());
+        }
+        if(shot.getCreatedAt() != null) {
+            tvCreatedAt.setText(Utils.formatDate(shot.getCreatedAt()));
+        }
         if(!Utils.stringIsEmpty(shot.getCommentsCount()+"")) {
             llContentComments.setVisibility(View.VISIBLE);
             tvViewsCount.setText(shot.getViewsCount()+ " " +getResources().getString(R.string.views));
